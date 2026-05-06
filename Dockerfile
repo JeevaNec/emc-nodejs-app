@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Install dependencies (none in this simple case)
-RUN npm install
+RUN apt-get update && apt-get install -y git
 
 # Expose port
 EXPOSE 3000
